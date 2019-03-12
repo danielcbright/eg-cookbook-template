@@ -1,6 +1,6 @@
-# eg-cookbook-template CHANGELOG
+# COOKBOOKNAME CHANGELOG
 
-This file is used to list changes made in each version of the eg-cookbook-template cookbook.
+This file is used to list changes made in each version of the COOKBOOKNAME cookbook.
 
 # 0.1.0
 

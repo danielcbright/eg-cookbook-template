@@ -1,4 +1,7 @@
-# eg-cookbook-template
+# COOKBOOKNAME
 
-TODO: Enter the cookbook description here.
+SHORTDESCRIPTION
+
+## Description
+LONGDESCRIPTION
 

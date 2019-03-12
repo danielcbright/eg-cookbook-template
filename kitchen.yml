@@ -1,0 +1,42 @@
+---
+driver:
+  name: dokken
+  chef_version: '14.9.13'
+  privileged: true
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
+  always_update_cookbooks: true
+  product_name: chef
+  product_version: 14.9.13
+  install_strategy: always
+  sudo: true
+
+verifier:
+  name: inspec
+
+platforms:
+- name: centos-7
+  driver:
+    image: centos:7
+    platform: rhel
+    pid_one_command: /usr/lib/systemd/systemd
+    intermediate_instructions:
+      - RUN yum -y install lsof which systemd-sysv initscripts wget net-tools
+
+suites:
+  - name: default
+    run_list:
+      - recipe[COOKBOOKNAME::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
+      chef_client_updater:
+        post_install_action: "exec"
