@@ -1,7 +1,7 @@
 name 'COOKBOOKNAME'
 supports 'SUPPORTS'
 maintainer 'MAINTAINER'
-maintainer_email 'MAINTAINEREMAIL'
+maintainer_email 'MAINTAINER_EMAIL'
 license 'LICENSE'
 description 'SHORTDESCRIPTION'
 long_description 'LONGDESCRIPTION'
